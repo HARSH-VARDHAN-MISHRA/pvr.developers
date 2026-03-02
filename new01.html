@@ -5,10 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>PVR Developers – Civil · Interior · Vastu</title>
 
+<!-- ── SEO & Open Graph (WhatsApp / Instagram / iMessage link previews) ── -->
 <meta name="description" content="PVR Developers – Premium Architecture, Interior Design, Civil Construction & Vastu in New Delhi. Making luxury affordable, one home at a time. Call +91 99536 26969"/>
 <meta name="keywords" content="interior design delhi, construction company delhi, architecture punjabi bagh, vastu consultant delhi, luxury home interior, modular kitchen delhi, PVR developers"/>
 <meta name="author" content="PVR Developers"/>
 <meta name="robots" content="index, follow"/>
+
+<!-- Open Graph — controls how link looks on WhatsApp, Instagram, Facebook -->
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="PVR Developers"/>
 <meta property="og:title" content="PVR Developers – Making Luxury Affordable, One Home At A Time"/>
@@ -18,11 +21,17 @@
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta property="og:locale" content="en_IN"/>
+
+<!-- Twitter / X card -->
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="PVR Developers – Luxury Interiors & Construction, New Delhi"/>
 <meta name="twitter:description" content="Premium Architecture, Interior Design, Construction & Vastu. Making luxury affordable, one home at a time."/>
 <meta name="twitter:image" content="https://www.pvrdevelopers.com/assets/images/og-preview.jpg"/>
+
+<!-- Canonical URL -->
 <link rel="canonical" href="https://www.pvrdevelopers.com"/>
+
+<!-- Favicon (put your logo.ico or logo.png in root) -->
 <link rel="icon" type="image/png" href="./assets/images/logo.png"/>
 <link rel="apple-touch-icon" href="./assets/images/logo.png"/>
 
@@ -39,7 +48,6 @@
   body{background:var(--dark);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden}
   ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--dark)}::-webkit-scrollbar-thumb{background:var(--gold)}
 
-  /* NAV */
   nav{position:fixed;top:0;left:0;right:0;z-index:999;display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);padding:0 60px;background:rgba(13,13,13,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);transition:height 0.3s}
   nav.scrolled{height:60px}
   .nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
@@ -55,7 +63,6 @@
   .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
   .hamburger span{display:block;width:24px;height:1.5px;background:var(--white);transition:0.3s}
 
-  /* HERO */
   #hero{min-height:100vh;padding-top:var(--nav-h);display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-left:60px;padding-right:60px;padding-bottom:60px;position:relative;overflow:hidden}
   .hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0d0d0d 0%,#1a1208 50%,#0d0d0d 100%)}
   .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(184,150,106,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(184,150,106,0.04) 1px,transparent 1px);background-size:60px 60px}
@@ -76,14 +83,12 @@
   .stat-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:var(--gold);line-height:1;display:block}
   .stat-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--grey);margin-top:6px;display:block}
 
-  /* MARQUEE */
   .marquee-wrap{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 0;background:var(--dark2)}
   .marquee-track{display:flex;gap:60px;width:max-content;animation:marquee 25s linear infinite}
   .marquee-item{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--grey);white-space:nowrap;display:flex;align-items:center;gap:20px}
   .marquee-item::after{content:'✦';color:var(--gold);font-size:8px}
   @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-  /* SECTIONS */
   section{padding:120px 60px}
   .sec-eye{display:flex;align-items:center;gap:16px;margin-bottom:16px}
   .sec-eye::before{content:'';display:block;width:30px;height:1px;background:var(--gold)}
@@ -92,11 +97,25 @@
   .sec-title em{font-style:italic;color:var(--gold)}
   .gold-line{width:60px;height:1px;background:var(--gold);margin:24px 0}
 
-  /* ABOUT */
+  /* ── ABOUT ── */
   #about{background:var(--dark2);display:flex;align-items:center;gap:80px}
-  .about-img{flex:0 0 420px;height:560px;position:relative;overflow:hidden;border:1px solid var(--border)}
-  .about-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
-  .about-img .about-placeholder{width:100%;height:100%;background:linear-gradient(135deg,#1a1508,#2a2015);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+  /* FIX: proper image container — no longer giant */
+  .about-img{
+    flex:0 0 420px;height:560px;
+    position:relative;overflow:hidden;
+    border:1px solid var(--border);
+  }
+  .about-img img{
+    width:100%;height:100%;
+    object-fit:cover;object-position:center top;
+    display:block;
+  }
+  /* fallback placeholder shown when no image */
+  .about-img .about-placeholder{
+    width:100%;height:100%;
+    background:linear-gradient(135deg,#1a1508,#2a2015);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+  }
   .about-img::after{content:'';position:absolute;bottom:-16px;right:-16px;width:180px;height:180px;border:1px solid var(--gold);opacity:0.25;pointer-events:none}
   .about-text{flex:1}
   .about-text p{font-size:15px;line-height:1.9;color:rgba(249,246,241,0.7);margin-bottom:18px;font-weight:300}
@@ -120,28 +139,53 @@
   .svc-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;margin-bottom:12px}
   .svc-desc{font-size:13px;line-height:1.8;color:var(--grey)}
 
-  /* PORTFOLIO */
+  /* ── PORTFOLIO ── */
   #portfolio{background:var(--dark3)}
   .port-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:24px}
   .filters{display:flex;gap:8px;flex-wrap:wrap}
   .fbtn{padding:8px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:1px solid var(--border);background:transparent;color:var(--grey);cursor:pointer;transition:0.3s;font-family:'Inter',sans-serif}
   .fbtn.active,.fbtn:hover{border-color:var(--gold);color:var(--gold);background:rgba(184,150,106,0.05)}
   .port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+  /* Each portfolio item */
   .pi{position:relative;overflow:hidden;cursor:pointer;background:var(--dark4)}
   .pi.wide{grid-column:span 2}
-  .pi-media{width:100%;aspect-ratio:4/3;display:block;position:relative;overflow:hidden}
+  /* The media wrapper — holds img or video */
+  .pi-media{
+    width:100%;aspect-ratio:4/3;
+    display:block;position:relative;overflow:hidden;
+  }
   .pi.wide .pi-media{aspect-ratio:16/9}
-  .pi-media img,.pi-media video{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s}
-  .pi:hover .pi-media img,.pi:hover .pi-media video{transform:scale(1.04)}
+  .pi-media img,.pi-media video{
+    width:100%;height:100%;
+    object-fit:cover;display:block;
+    transition:transform 0.5s;
+  }
+  .pi:hover .pi-media img,
+  .pi:hover .pi-media video{transform:scale(1.04)}
+  /* video autoplay muted loop */
   .pi-media video{cursor:pointer}
-  .pi-media .play-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(184,150,106,0.85);display:flex;align-items:center;justify-content:center;pointer-events:none;transition:opacity 0.3s}
+  /* play icon overlay for videos */
+  .pi-media .play-icon{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:48px;height:48px;border-radius:50%;
+    background:rgba(184,150,106,0.85);
+    display:flex;align-items:center;justify-content:center;
+    pointer-events:none;transition:opacity 0.3s;
+  }
   .pi-media .play-icon svg{width:20px;height:20px;margin-left:3px}
   .pi-media.playing .play-icon{opacity:0}
-  .pi-ph{width:100%;aspect-ratio:4/3;background:linear-gradient(135deg,#1a1a1a,#2a1f0a);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;transition:transform 0.5s}
+  /* fallback placeholder (no src set) */
+  .pi-ph{
+    width:100%;aspect-ratio:4/3;
+    background:linear-gradient(135deg,#1a1a1a,#2a1f0a);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+    transition:transform 0.5s;
+  }
   .pi.wide .pi-ph{aspect-ratio:16/9}
   .pi:hover .pi-ph{transform:scale(1.04)}
   .ph-icon{width:44px;height:44px;opacity:0.18}
   .ph-txt{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--grey);opacity:0.5}
+  /* overlay label */
   .pi-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,13,13,0.92) 0%,transparent 55%);opacity:0;transition:0.4s;display:flex;flex-direction:column;justify-content:flex-end;padding:28px}
   .pi:hover .pi-ov{opacity:1}
   .pi-ov h4{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300}
@@ -160,7 +204,7 @@
   .why-img img{width:100%;height:100%;object-fit:cover;display:block}
   .why-img::after{content:'';position:absolute;top:20px;left:20px;right:20px;bottom:20px;border:1px solid var(--border);pointer-events:none}
 
-  /* INSTAGRAM */
+  /* ── INSTAGRAM SECTION ── */
   #instagram{background:var(--dark);padding:100px 60px}
   .ig-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:20px}
   .ig-profile{display:flex;align-items:center;gap:20px}
@@ -173,21 +217,46 @@
   .ig-follow-btn:hover{opacity:0.85;transform:translateY(-2px)}
   .ig-follow-btn svg{width:18px;height:18px;flex-shrink:0}
 
-  /* Reel Card Grid */
-  .ig-reel-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-  .ig-reel-card{position:relative;aspect-ratio:9/16;overflow:hidden;cursor:pointer;background:#141414;border:1px solid rgba(184,150,106,0.15);text-decoration:none;display:block;transition:transform 0.3s,border-color 0.3s}
-  .ig-reel-card:hover{transform:translateY(-4px);border-color:rgba(184,150,106,0.5)}
-  .ig-reel-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.5s;position:relative;z-index:1}
-  .ig-reel-card:hover img{transform:scale(1.06)}
-  .rc-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,13,13,0.92) 0%,rgba(13,13,13,0.1) 50%,transparent 100%);z-index:2}
-  .rc-type{position:absolute;top:10px;right:10px;background:rgba(0,0,0,0.6);border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;z-index:3}
-  .rc-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(0.8);width:56px;height:56px;border-radius:50%;background:rgba(184,150,106,0.85);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.3s,transform 0.3s;z-index:3}
-  .ig-reel-card:hover .rc-play{opacity:1;transform:translate(-50%,-50%) scale(1)}
-  .rc-play svg{margin-left:4px}
-  .rc-info{position:absolute;bottom:0;left:0;right:0;padding:16px 14px;z-index:3}
-  .rc-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:4px}
-  .rc-sub{font-size:11px;color:rgba(249,246,241,0.5)}
-  .rc-thumb-bg{width:100%;height:100%;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:0}
+  /* ── Instagram embed grid ── */
+  .ig-embed-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+  }
+  .ig-embed-item{
+    width:100%;overflow:hidden;
+    background:#0d0d0d;
+    border:1px solid rgba(184,150,106,0.15);
+    display:flex;align-items:stretch;
+    min-height:340px;
+  }
+  /* make blockquote fill the cell */
+  .ig-embed-item .instagram-media{
+    min-width:100%!important;
+    width:100%!important;
+    margin:0!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    background:#000!important;
+  }
+  /* CTA card — last slot */
+  .ig-cta-card{
+    display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,#1a1208,#2a1e0a);
+    border:1px solid rgba(184,150,106,0.25)!important;
+    padding:32px 20px;min-height:340px;
+  }
+  .ig-cta-inner{text-align:center}
+  .ig-cta-inner p{line-height:1.7}
+
+  /* ── Notice banner (shown while embeds load) ── */
+  .ig-notice{
+    text-align:center;padding:14px 20px;margin-bottom:20px;
+    background:rgba(184,150,106,0.06);border:1px solid var(--border);
+    font-size:12px;color:var(--grey);letter-spacing:0.5px;
+  }
+  .ig-notice strong{color:var(--gold)}
 
   /* TESTIMONIALS */
   #testimonials{background:var(--dark3);text-align:center}
@@ -265,17 +334,14 @@
   .wa-float:hover .wa-tooltip{opacity:1;transform:translateX(0)}
   @keyframes waPulse{0%,100%{box-shadow:0 4px 24px rgba(37,211,102,0.45)}50%{box-shadow:0 4px 32px rgba(37,211,102,0.7),0 0 0 10px rgba(37,211,102,0.08)}}
 
-  /* MOBILE MENU */
   .mmenu{display:none;position:fixed;inset:0;background:rgba(13,13,13,0.98);z-index:998;flex-direction:column;align-items:center;justify-content:center;gap:36px}
   .mmenu.open{display:flex}
   .mmenu a{color:var(--white);text-decoration:none;font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;transition:color 0.3s}
   .mmenu a:hover{color:var(--gold)}
 
-  /* FADE */
   .fade-up{opacity:0;transform:translateY(30px);transition:opacity 0.7s,transform 0.7s}
   .fade-up.vis{opacity:1;transform:translateY(0)}
 
-  /* RESPONSIVE */
   @media(max-width:1100px){
     nav{padding:0 24px}
     .nav-links,.nav-cta{display:none}
@@ -291,7 +357,7 @@
     .why-img{height:320px}
     .testi-grid{grid-template-columns:1fr}
     #contact{grid-template-columns:1fr;padding:80px 24px}
-    .ig-reel-grid{grid-template-columns:repeat(2,1fr)}
+    .ig-embed-grid{grid-template-columns:repeat(2,1fr)}
     footer{padding:48px 24px 24px}
     .hero-stats{gap:24px}
     #instagram{padding:80px 24px}
@@ -302,7 +368,7 @@
     .pi.wide{grid-column:span 1}
     .why-feats{grid-template-columns:1fr}
     .frow{grid-template-columns:1fr}
-    .ig-reel-grid{grid-template-columns:repeat(2,1fr);gap:6px}
+    .ig-embed-grid{grid-template-columns:1fr}
     .ig-header{flex-direction:column;align-items:flex-start}
     .wa-float{bottom:20px;right:20px}
   }
@@ -388,6 +454,7 @@
 
 <!-- ABOUT -->
 <section id="about">
+  <!-- FIX: founder image properly sized inside container -->
   <div class="about-img fade-up">
     <img src="./assets/images/founder.png" alt="Vishadh Chauhan – Founder, PVR Developers"
          onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
@@ -448,7 +515,7 @@
   </div>
 </section>
 
-<!-- PORTFOLIO -->
+<!-- ── PORTFOLIO ── -->
 <section id="portfolio">
   <div class="port-head fade-up">
     <div>
@@ -464,19 +531,28 @@
       <button class="fbtn" onclick="filterClick(this)">Wardrobe</button>
     </div>
   </div>
+
   <div class="port-grid fade-up">
+
+    <!-- 1. Kitchen – wide (image) -->
     <div class="pi wide">
       <div class="pi-media">
-        <img src="./assets/images/kitchen/image-1.jpg" alt="Modern Kitchen" onerror="this.parentElement.innerHTML='<div class=pi-ph><svg class=ph-icon viewBox=\'0 0 44 44\' fill=\'none\'><rect x=\'6\' y=\'14\' width=\'32\' height=\'20\' rx=\'1\' stroke=\'#b8966a\' stroke-width=\'1.2\'/></svg><span class=ph-txt>Kitchen</span></div>'"/>
+        <img src="./assets/images/kitchen/image-1.jpg" alt="Modern Kitchen"
+             onerror="this.parentElement.innerHTML='<div class=pi-ph><svg class=ph-icon viewBox=\'0 0 44 44\' fill=\'none\'><rect x=\'6\' y=\'14\' width=\'32\' height=\'20\' rx=\'1\' stroke=\'#b8966a\' stroke-width=\'1.2\'/></svg><span class=ph-txt>Kitchen</span></div>'"/>
       </div>
       <div class="pi-ov"><h4>Modern Kitchen</h4><p>Kitchen Design · Punjabi Bagh</p></div>
     </div>
+
+    <!-- 2. Kitchen – image -->
     <div class="pi">
       <div class="pi-media">
-        <img src="./assets/images/kitchen/image-3.jpg" alt="Kitchen Design" onerror="this.parentElement.innerHTML='<div class=pi-ph><svg class=ph-icon viewBox=\'0 0 44 44\' fill=\'none\'><rect x=\'6\' y=\'14\' width=\'32\' height=\'20\' rx=\'1\' stroke=\'#b8966a\' stroke-width=\'1.2\'/></svg><span class=ph-txt>Kitchen</span></div>'"/>
+        <img src="./assets/images/kitchen/image-3.jpg" alt="Kitchen Design"
+             onerror="this.parentElement.innerHTML='<div class=pi-ph><svg class=ph-icon viewBox=\'0 0 44 44\' fill=\'none\'><rect x=\'6\' y=\'14\' width=\'32\' height=\'20\' rx=\'1\' stroke=\'#b8966a\' stroke-width=\'1.2\'/></svg><span class=ph-txt>Kitchen</span></div>'"/>
       </div>
       <div class="pi-ov"><h4>Designer Kitchen</h4><p>Kitchen Design · Delhi</p></div>
     </div>
+
+    <!-- 3. Bathroom – VIDEO -->
     <div class="pi">
       <div class="pi-media" id="pm-bath1">
         <video muted loop playsinline preload="metadata" onclick="toggleVideo(this)">
@@ -488,36 +564,52 @@
       </div>
       <div class="pi-ov"><h4>Luxury Bathroom</h4><p>Bathroom Design · New Delhi</p></div>
     </div>
+
+    <!-- 4. Living Room – image -->
     <div class="pi">
       <div class="pi-media">
-        <img src="./assets/images/living-room/image-1.jpg" alt="Living Room" onerror="this.parentElement.innerHTML='<div class=pi-ph><svg class=ph-icon viewBox=\'0 0 44 44\' fill=\'none\'><path d=\'M6 38V20L22 8l16 12v18\' stroke=\'#b8966a\' stroke-width=\'1.2\' stroke-linejoin=\'round\'/></svg><span class=ph-txt>Living Room</span></div>'"/>
+        <img src="./assets/images/living-room/image-1.jpg" alt="Living Room"
+             onerror="this.parentElement.innerHTML='<div class=pi-ph><svg class=ph-icon viewBox=\'0 0 44 44\' fill=\'none\'><path d=\'M6 38V20L22 8l16 12v18\' stroke=\'#b8966a\' stroke-width=\'1.2\' stroke-linejoin=\'round\'/></svg><span class=ph-txt>Living Room</span></div>'"/>
       </div>
       <div class="pi-ov"><h4>Living Room</h4><p>Interior Design · Delhi</p></div>
     </div>
+
+    <!-- 5. Living Room – wide (image) -->
     <div class="pi wide">
       <div class="pi-media">
-        <img src="./assets/images/living-room/image-2.jpg" alt="Living Space" onerror="this.parentElement.innerHTML='<div class=pi-ph><svg class=ph-icon viewBox=\'0 0 44 44\' fill=\'none\'><path d=\'M6 38V20L22 8l16 12v18\' stroke=\'#b8966a\' stroke-width=\'1.2\' stroke-linejoin=\'round\'/></svg><span class=ph-txt>Living Room</span></div>'"/>
+        <img src="./assets/images/living-room/image-2.jpg" alt="Living Space"
+             onerror="this.parentElement.innerHTML='<div class=pi-ph><svg class=ph-icon viewBox=\'0 0 44 44\' fill=\'none\'><path d=\'M6 38V20L22 8l16 12v18\' stroke=\'#b8966a\' stroke-width=\'1.2\' stroke-linejoin=\'round\'/></svg><span class=ph-txt>Living Room</span></div>'"/>
       </div>
       <div class="pi-ov"><h4>Premium Living Space</h4><p>Interior Design · Punjabi Bagh</p></div>
     </div>
+
+    <!-- 6. Kitchen – image -->
     <div class="pi">
       <div class="pi-media">
-        <img src="./assets/images/kitchen/image-4.jpg" alt="Kitchen Interior" onerror="this.parentElement.innerHTML='<div class=pi-ph><svg class=ph-icon viewBox=\'0 0 44 44\' fill=\'none\'><rect x=\'6\' y=\'14\' width=\'32\' height=\'20\' rx=\'1\' stroke=\'#b8966a\' stroke-width=\'1.2\'/></svg><span class=ph-txt>Kitchen</span></div>'"/>
+        <img src="./assets/images/kitchen/image-4.jpg" alt="Kitchen Interior"
+             onerror="this.parentElement.innerHTML='<div class=pi-ph><svg class=ph-icon viewBox=\'0 0 44 44\' fill=\'none\'><rect x=\'6\' y=\'14\' width=\'32\' height=\'20\' rx=\'1\' stroke=\'#b8966a\' stroke-width=\'1.2\'/></svg><span class=ph-txt>Kitchen</span></div>'"/>
       </div>
       <div class="pi-ov"><h4>Luxury Kitchen</h4><p>Kitchen Design · Delhi</p></div>
     </div>
+
+    <!-- 7. Living Room – image -->
     <div class="pi">
       <div class="pi-media">
-        <img src="./assets/images/living-room/image-3.jpg" alt="Living Room" onerror="this.parentElement.innerHTML='<div class=pi-ph><svg class=ph-icon viewBox=\'0 0 44 44\' fill=\'none\'><path d=\'M6 38V20L22 8l16 12v18\' stroke=\'#b8966a\' stroke-width=\'1.2\' stroke-linejoin=\'round\'/></svg><span class=ph-txt>Living Room</span></div>'"/>
+        <img src="./assets/images/living-room/image-3.jpg" alt="Living Room"
+             onerror="this.parentElement.innerHTML='<div class=pi-ph><svg class=ph-icon viewBox=\'0 0 44 44\' fill=\'none\'><path d=\'M6 38V20L22 8l16 12v18\' stroke=\'#b8966a\' stroke-width=\'1.2\' stroke-linejoin=\'round\'/></svg><span class=ph-txt>Living Room</span></div>'"/>
       </div>
       <div class="pi-ov"><h4>Modern Living</h4><p>Interior Design · New Delhi</p></div>
     </div>
+
+    <!-- 8. Living Room – image -->
     <div class="pi">
       <div class="pi-media">
-        <img src="./assets/images/living-room/image-4.jpg" alt="Complete Home" onerror="this.parentElement.innerHTML='<div class=pi-ph><svg class=ph-icon viewBox=\'0 0 44 44\' fill=\'none\'><rect x=\'6\' y=\'6\' width=\'32\' height=\'32\' rx=\'1\' stroke=\'#b8966a\' stroke-width=\'1.2\'/></svg><span class=ph-txt>Complete Home</span></div>'"/>
+        <img src="./assets/images/living-room/image-4.jpg" alt="Complete Home"
+             onerror="this.parentElement.innerHTML='<div class=pi-ph><svg class=ph-icon viewBox=\'0 0 44 44\' fill=\'none\'><rect x=\'6\' y=\'6\' width=\'32\' height=\'32\' rx=\'1\' stroke=\'#b8966a\' stroke-width=\'1.2\'/></svg><span class=ph-txt>Complete Home</span></div>'"/>
       </div>
       <div class="pi-ov"><h4>Complete Home</h4><p>Full Interior · Delhi</p></div>
     </div>
+
   </div>
 </section>
 
@@ -539,13 +631,14 @@
       </div>
     </div>
     <div class="why-img fade-up">
-      <img src="./assets/images/living-room/image-3.jpg" alt="PVR Developers Work" onerror="this.style.display='none'"/>
+      <img src="./assets/images/living-room/image-3.jpg" alt="PVR Developers Work"
+           onerror="this.style.display='none'"/>
       <span style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--grey);opacity:0.5;position:absolute">Replace with Site Photo</span>
     </div>
   </div>
 </section>
 
-<!-- INSTAGRAM -->
+<!-- ── INSTAGRAM SECTION ── -->
 <section id="instagram">
   <div class="ig-header fade-up">
     <div class="ig-profile">
@@ -569,16 +662,149 @@
     </a>
   </div>
 
-  <!-- Reel Cards — no embed.js needed, works everywhere -->
-  <div class="ig-reel-grid fade-up" id="igGrid"></div>
-
-  <div style="text-align:center;margin-top:40px">
-    <a href="https://www.instagram.com/pvr.developers" target="_blank" rel="noopener"
-       class="ig-follow-btn" style="margin:0 auto">
-      <svg viewBox="0 0 24 24" fill="none" style="width:18px;height:18px"><rect x="2" y="2" width="20" height="20" rx="5" fill="white" fill-opacity="0.3"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
-      View Full Profile @pvr.developers
-    </a>
+  <!-- Info notice — explains embeds need live hosting -->
+  <div class="ig-notice">
+    <strong>Live Instagram Reels</strong> — Posts load automatically when this site is hosted online. Viewing on a local file? 
+    <a href="https://www.instagram.com/pvr.developers" target="_blank" style="color:var(--gold);text-decoration:none">Visit our profile directly →</a>
   </div>
+
+  <div class="ig-embed-grid fade-up">
+
+    <div class="ig-embed-item">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/pvr.developers/reel/DVTZpnNge5H/"
+        data-instgrm-version="14"
+        style="background:#0d0d0d;border:0;border-radius:0;box-shadow:none;margin:0;max-width:100%;min-width:100%;padding:0;width:100%;">
+        <!-- Fallback link shown before embed.js loads -->
+        <div style="padding:24px;text-align:center">
+          <a href="https://www.instagram.com/pvr.developers/reel/DVTZpnNge5H/" target="_blank"
+             style="display:inline-flex;flex-direction:column;align-items:center;gap:12px;text-decoration:none;color:var(--white)">
+            <svg viewBox="0 0 24 24" fill="none" style="width:36px;height:36px"><defs><linearGradient id="igf1" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" fill="url(#igf1)"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+            <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)">Reel · Kitchen Design</span>
+            <span style="font-size:12px;color:var(--grey)">Tap to watch on Instagram</span>
+          </a>
+        </div>
+      </blockquote>
+    </div>
+
+    <div class="ig-embed-item">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/pvr.developers/reel/DVJEnv-gV8d/"
+        data-instgrm-version="14"
+        style="background:#0d0d0d;border:0;border-radius:0;box-shadow:none;margin:0;max-width:100%;min-width:100%;padding:0;width:100%;">
+        <div style="padding:24px;text-align:center">
+          <a href="https://www.instagram.com/pvr.developers/reel/DVJEnv-gV8d/" target="_blank"
+             style="display:inline-flex;flex-direction:column;align-items:center;gap:12px;text-decoration:none">
+            <svg viewBox="0 0 24 24" fill="none" style="width:36px;height:36px"><defs><linearGradient id="igf2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" fill="url(#igf2)"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+            <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)">Reel · Interior Reveal</span>
+            <span style="font-size:12px;color:var(--grey)">Tap to watch on Instagram</span>
+          </a>
+        </div>
+      </blockquote>
+    </div>
+
+    <div class="ig-embed-item">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/pvr.developers/reel/DVGe6FFjKlU/"
+        data-instgrm-version="14"
+        style="background:#0d0d0d;border:0;border-radius:0;box-shadow:none;margin:0;max-width:100%;min-width:100%;padding:0;width:100%;">
+        <div style="padding:24px;text-align:center">
+          <a href="https://www.instagram.com/pvr.developers/reel/DVGe6FFjKlU/" target="_blank"
+             style="display:inline-flex;flex-direction:column;align-items:center;gap:12px;text-decoration:none">
+            <svg viewBox="0 0 24 24" fill="none" style="width:36px;height:36px"><defs><linearGradient id="igf3" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" fill="url(#igf3)"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+            <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)">Reel · Bedroom Design</span>
+            <span style="font-size:12px;color:var(--grey)">Tap to watch on Instagram</span>
+          </a>
+        </div>
+      </blockquote>
+    </div>
+
+    <div class="ig-embed-item">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/pvr.developers/p/DVDO8H-kqgd/"
+        data-instgrm-version="14"
+        style="background:#0d0d0d;border:0;border-radius:0;box-shadow:none;margin:0;max-width:100%;min-width:100%;padding:0;width:100%;">
+        <div style="padding:24px;text-align:center">
+          <a href="https://www.instagram.com/pvr.developers/p/DVDO8H-kqgd/" target="_blank"
+             style="display:inline-flex;flex-direction:column;align-items:center;gap:12px;text-decoration:none">
+            <svg viewBox="0 0 24 24" fill="none" style="width:36px;height:36px"><defs><linearGradient id="igf4" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" fill="url(#igf4)"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+            <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)">Post · Project Showcase</span>
+            <span style="font-size:12px;color:var(--grey)">Tap to view on Instagram</span>
+          </a>
+        </div>
+      </blockquote>
+    </div>
+
+    <div class="ig-embed-item">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/pvr.developers/reel/DVBVyL7Abe2/"
+        data-instgrm-version="14"
+        style="background:#0d0d0d;border:0;border-radius:0;box-shadow:none;margin:0;max-width:100%;min-width:100%;padding:0;width:100%;">
+        <div style="padding:24px;text-align:center">
+          <a href="https://www.instagram.com/pvr.developers/reel/DVBVyL7Abe2/" target="_blank"
+             style="display:inline-flex;flex-direction:column;align-items:center;gap:12px;text-decoration:none">
+            <svg viewBox="0 0 24 24" fill="none" style="width:36px;height:36px"><defs><linearGradient id="igf5" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" fill="url(#igf5)"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+            <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)">Reel · Living Room</span>
+            <span style="font-size:12px;color:var(--grey)">Tap to watch on Instagram</span>
+          </a>
+        </div>
+      </blockquote>
+    </div>
+
+    <div class="ig-embed-item">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/pvr.developers/reel/DU-x6i4AXnc/"
+        data-instgrm-version="14"
+        style="background:#0d0d0d;border:0;border-radius:0;box-shadow:none;margin:0;max-width:100%;min-width:100%;padding:0;width:100%;">
+        <div style="padding:24px;text-align:center">
+          <a href="https://www.instagram.com/pvr.developers/reel/DU-x6i4AXnc/" target="_blank"
+             style="display:inline-flex;flex-direction:column;align-items:center;gap:12px;text-decoration:none">
+            <svg viewBox="0 0 24 24" fill="none" style="width:36px;height:36px"><defs><linearGradient id="igf6" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" fill="url(#igf6)"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+            <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)">Reel · Full Home Tour</span>
+            <span style="font-size:12px;color:var(--grey)">Tap to watch on Instagram</span>
+          </a>
+        </div>
+      </blockquote>
+    </div>
+
+    <div class="ig-embed-item">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/pvr.developers/reel/DUdSStnAZX9/"
+        data-instgrm-version="14"
+        style="background:#0d0d0d;border:0;border-radius:0;box-shadow:none;margin:0;max-width:100%;min-width:100%;padding:0;width:100%;">
+        <div style="padding:24px;text-align:center">
+          <a href="https://www.instagram.com/pvr.developers/reel/DUdSStnAZX9/" target="_blank"
+             style="display:inline-flex;flex-direction:column;align-items:center;gap:12px;text-decoration:none">
+            <svg viewBox="0 0 24 24" fill="none" style="width:36px;height:36px"><defs><linearGradient id="igf7" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs><rect x="2" y="2" width="20" height="20" rx="5" fill="url(#igf7)"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+            <span style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)">Reel · Wardrobe Design</span>
+            <span style="font-size:12px;color:var(--grey)">Tap to watch on Instagram</span>
+          </a>
+        </div>
+      </blockquote>
+    </div>
+
+    <!-- Slot 8: CTA card -->
+    <div class="ig-embed-item ig-cta-card">
+      <div class="ig-cta-inner">
+        <svg viewBox="0 0 24 24" fill="none" style="width:48px;height:48px;margin-bottom:16px">
+          <defs><linearGradient id="igcta2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs>
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#igcta2)"/>
+          <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.5" fill="none"/>
+          <circle cx="17.5" cy="6.5" r="1.2" fill="white"/>
+        </svg>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;margin-bottom:8px;color:#f9f6f1">See All Reels &amp; Projects</p>
+        <p style="font-size:12px;color:#888;margin-bottom:24px;line-height:1.7">Follow @pvr.developers for daily interior inspiration and project reveals</p>
+        <a href="https://www.instagram.com/pvr.developers" target="_blank" rel="noopener"
+          style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);color:#fff;padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;text-decoration:none">
+          <svg viewBox="0 0 24 24" fill="none" style="width:16px;height:16px"><rect x="2" y="2" width="20" height="20" rx="5" fill="white" fill-opacity="0.3"/><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.5" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+          Follow Us
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <!-- Instagram official embed script -->
+  <script async src="https://www.instagram.com/embed.js"></script>
 </section>
 
 <!-- TESTIMONIALS -->
@@ -697,20 +923,30 @@
     btn.classList.add('active');
   }
 
-  // Video toggle
+  // Video toggle — click to play/pause, hover to show controls
   function toggleVideo(video) {
     const wrapper = video.closest('.pi-media');
-    if (video.paused) { video.play(); wrapper.classList.add('playing'); }
-    else { video.pause(); wrapper.classList.remove('playing'); }
+    if (video.paused) {
+      video.play();
+      wrapper.classList.add('playing');
+    } else {
+      video.pause();
+      wrapper.classList.remove('playing');
+    }
   }
 
-  // Auto-play videos on scroll
+  // Auto-play videos when scrolled into view
   const videoObs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       const video = e.target.querySelector('video');
       if (!video) return;
-      if (e.isIntersecting) { video.play().catch(()=>{}); e.target.querySelector('.pi-media')?.classList.add('playing'); }
-      else { video.pause(); e.target.querySelector('.pi-media')?.classList.remove('playing'); }
+      if (e.isIntersecting) {
+        video.play().catch(() => {});
+        e.target.querySelector('.pi-media')?.classList.add('playing');
+      } else {
+        video.pause();
+        e.target.querySelector('.pi-media')?.classList.remove('playing');
+      }
     });
   }, { threshold: 0.5 });
   document.querySelectorAll('.pi').forEach(el => videoObs.observe(el));
@@ -726,89 +962,8 @@
     alert(`Thank you, ${name}!\n\nWe'll contact you shortly.\n\n📞 +91 99536 26969\n✉ info@pvrdevelopers.com\n\n— PVR Developers`);
   }
 
-  // ── Instagram Reel Cards (no embed.js — works everywhere) ──
-  (function(){
-    const reels = [
-      { url:'https://www.instagram.com/pvr.developers/reel/DVTZpnNge5H/', id:'DVTZpnNge5H', type:'reel', label:'Kitchen Design',    sub:'Interior · 2024' },
-      { url:'https://www.instagram.com/pvr.developers/reel/DVJEnv-gV8d/', id:'DVJEnv-gV8d', type:'reel', label:'Interior Reveal',   sub:'Living Room · Delhi' },
-      { url:'https://www.instagram.com/pvr.developers/reel/DVGe6FFjKlU/', id:'DVGe6FFjKlU', type:'reel', label:'Bedroom Design',    sub:'Master Bedroom' },
-      { url:'https://www.instagram.com/pvr.developers/p/DVDO8H-kqgd/',    id:'DVDO8H-kqgd', type:'post', label:'Project Showcase',  sub:'Complete Home' },
-      { url:'https://www.instagram.com/pvr.developers/reel/DVBVyL7Abe2/', id:'DVBVyL7Abe2', type:'reel', label:'Living Room',       sub:'Interior · Punjabi Bagh' },
-      { url:'https://www.instagram.com/pvr.developers/reel/DU-x6i4AXnc/', id:'DU-x6i4AXnc', type:'reel', label:'Full Home Tour',    sub:'Architecture · Delhi' },
-      { url:'https://www.instagram.com/pvr.developers/reel/DUdSStnAZX9/', id:'DUdSStnAZX9', type:'reel', label:'Wardrobe Design',   sub:'Modular · Custom' },
-    ];
-
-    const gradients = [
-      'linear-gradient(135deg,#1a1508,#2a1e0a)',
-      'linear-gradient(135deg,#0f1a1a,#1a2a20)',
-      'linear-gradient(135deg,#1a0f0f,#2a1515)',
-      'linear-gradient(135deg,#0f0f1a,#1a1528)',
-      'linear-gradient(135deg,#1a1a0f,#2a2510)',
-      'linear-gradient(135deg,#0f1a10,#152a18)',
-      'linear-gradient(135deg,#1a1208,#28200f)',
-    ];
-
-    const igIconSVG = `<svg viewBox="0 0 24 24" fill="none" style="width:32px;height:32px;opacity:0.5">
-      <defs><linearGradient id="igpl" x1="0%" y1="100%" x2="100%" y2="0%">
-        <stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/>
-      </linearGradient></defs>
-      <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#igpl)"/>
-      <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.5" fill="none"/>
-      <circle cx="17.5" cy="6.5" r="1.2" fill="white"/>
-    </svg>`;
-
-    const reelBadge = `<svg viewBox="0 0 24 24" fill="white" width="14" height="14"><polygon points="8,5 19,12 8,19"/></svg>`;
-    const postBadge = `<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" width="14" height="14"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>`;
-    const playBtn  = `<svg viewBox="0 0 24 24" fill="white" width="24" height="24"><polygon points="6,4 20,12 6,20"/></svg>`;
-
-    const grid = document.getElementById('igGrid');
-
-    // 7 reel cards
-    reels.forEach((r, i) => {
-      const a = document.createElement('a');
-      a.className = 'ig-reel-card';
-      a.href = r.url;
-      a.target = '_blank';
-      a.rel = 'noopener';
-      a.setAttribute('aria-label', r.label);
-
-      // Try Instagram's thumbnail CDN — works for public accounts when accessed from a browser
-      const thumbUrl = `https://www.instagram.com/p/${r.id}/media/?size=l`;
-
-      a.innerHTML = `
-        <div class="rc-thumb-bg" style="background:${gradients[i]}">${igIconSVG}</div>
-        <img src="${thumbUrl}" alt="${r.label}" loading="lazy" onerror="this.style.display='none'"/>
-        <div class="rc-ov"></div>
-        <div class="rc-type">${r.type === 'reel' ? reelBadge : postBadge}</div>
-        <div class="rc-play">${playBtn}</div>
-        <div class="rc-info">
-          <span class="rc-label">${r.label}</span>
-          <span class="rc-sub">${r.sub}</span>
-        </div>`;
-      grid.appendChild(a);
-    });
-
-    // 8th card — CTA
-    const cta = document.createElement('a');
-    cta.className = 'ig-reel-card';
-    cta.href = 'https://www.instagram.com/pvr.developers';
-    cta.target = '_blank';
-    cta.rel = 'noopener';
-    cta.style.cssText = 'background:linear-gradient(135deg,#1a1208,#2a1e0a);border:1px solid rgba(184,150,106,0.35);display:flex;align-items:center;justify-content:center;';
-    cta.innerHTML = `
-      <div style="text-align:center;padding:24px 16px">
-        <svg viewBox="0 0 24 24" fill="none" style="width:44px;height:44px;margin-bottom:14px">
-          <defs><linearGradient id="igctag" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#f09433"/><stop offset="50%" style="stop-color:#dc2743"/><stop offset="100%" style="stop-color:#bc1888"/></linearGradient></defs>
-          <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#igctag)"/>
-          <circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.5" fill="none"/>
-          <circle cx="17.5" cy="6.5" r="1.2" fill="white"/>
-        </svg>
-        <p style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:#f9f6f1;margin-bottom:6px;line-height:1.3">See All<br/>Reels & Posts</p>
-        <p style="font-size:11px;color:#888;margin-bottom:20px;letter-spacing:1px">@pvr.developers</p>
-        <span style="display:inline-block;background:linear-gradient(45deg,#f09433,#bc1888);color:#fff;padding:9px 20px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600">Follow Us</span>
-      </div>`;
-    grid.appendChild(cta);
-  })();
+  // Re-process Instagram embeds if embed.js loaded late
+  if (window.instgrm) window.instgrm.Embeds.process();
 </script>
 </body>
 </html>
