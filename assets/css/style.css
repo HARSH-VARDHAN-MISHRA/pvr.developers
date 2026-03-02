@@ -1335,7 +1335,7 @@ nav a {
   /* Every 3rd item takes full width for a premium alternating look */
   .inspiration-gallery-item:nth-child(3n) {
     grid-column: span 2;
-    height: 250px;
+    /* height: 250px; */
   }
 
   /* Disable large/wide behavior for mobile */
